@@ -1,8 +1,8 @@
 import logowhite from "../../assets/logowhite.png";
 import illustration from "../../assets/illustration.png";
 import "./style.css";
+import { Button } from "../Buttons";
 export const HomeIndex = ({ login }) => {
-  const nameButton = "Iniciar";
   return (
     <div className="home-index">
       <div className="container">
@@ -10,9 +10,7 @@ export const HomeIndex = ({ login }) => {
           <img src={logowhite} alt="" />
           <h1>Centralize o controle das suas finanças</h1>
           <span>de forma rápida e segura</span>
-          <button onClick={() => login()} className="buttons-primary">
-            Iniciar
-          </button>
+          <Button onClick={login}>Iniciar</Button>
         </div>
 
         <div>
