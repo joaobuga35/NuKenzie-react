@@ -1,0 +1,22 @@
+.buttons-primary {
+  width: 15.063rem;
+  height: 3rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+
+  background-color: #fd377e;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid #fd377e;
+  cursor: pointer;
+}
+
+.buttons-primary:hover {
+  filter: brightness(0.9);
+}
