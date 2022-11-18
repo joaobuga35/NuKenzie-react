@@ -55,3 +55,26 @@
   margin-top: 5.875rem;
   height: 31.25rem;
 }
+
+.buttons-primary {
+  width: 15.063rem;
+  height: 3rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+
+  background-color: var(--primary);
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.buttons-primary:hover {
+  filter: brightness(0.9);
+}
