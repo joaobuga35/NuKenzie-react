@@ -10,7 +10,9 @@ export const HomeIndex = ({ login }) => {
           <img src={logowhite} alt="" />
           <h1>Centralize o controle das suas finanças</h1>
           <span>de forma rápida e segura</span>
-          <Button onClick={login}>Iniciar</Button>
+          <Button onClick={login} className={"buttons-primary"}>
+            Iniciar
+          </Button>
         </div>
 
         <div>

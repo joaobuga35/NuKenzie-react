@@ -1,5 +1,7 @@
 import "./header.css";
 import logoblack from "../../assets/logoblack.png";
+import { Form } from "../Form";
+import { List } from "../list";
 export const Header = ({ logout }) => {
   return (
     <div className="principal-content">
@@ -11,6 +13,10 @@ export const Header = ({ logout }) => {
           </button>
         </div>
       </header>
+      <section className="section-principal">
+        <Form></Form>
+        <List></List>
+      </section>
     </div>
   );
 };
