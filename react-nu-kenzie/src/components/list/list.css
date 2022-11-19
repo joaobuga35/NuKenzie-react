@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 6.25rem;
+}
+
+.div-btn-list {
+  display: flex;
+  gap: 1rem;
+}
