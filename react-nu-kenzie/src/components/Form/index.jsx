@@ -1,5 +1,6 @@
 import "./form.css";
 import { Button } from "../Buttons";
+import { TotalMoney } from "../TotalMoney";
 export const Form = () => {
   return (
     <section>
@@ -51,6 +52,7 @@ export const Form = () => {
           </Button>
         </div>
       </form>
+      <TotalMoney></TotalMoney>
     </section>
   );
 };

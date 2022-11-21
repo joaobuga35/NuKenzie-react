@@ -1,0 +1,47 @@
+.card-values {
+  width: 27.563rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: 8px;
+  background-color: var(--gray-1);
+}
+
+.card-green {
+  border-left: 5px solid var(--color-secundary);
+}
+
+.card-white {
+  border-left: 5px solid var(--gray-2);
+}
+
+.div-format-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-card {
+  font-size: 1.75rem;
+}
+
+.div-btn-trash {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.button-trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--gray-2);
+
+  border: none;
+  cursor: pointer;
+}
+
+.title-card {
+  font-size: 1rem;
+}

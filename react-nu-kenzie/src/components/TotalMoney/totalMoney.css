@@ -1,0 +1,26 @@
+.div-total-money {
+  padding: 1.25rem 1.5rem;
+  border-radius: 4px;
+  border: 2px solid var(--gray-2);
+}
+
+.div-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.375rem;
+}
+
+.description-total {
+  font-weight: 700;
+}
+
+.value-total {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.message {
+  font-weight: 400;
+  font-size: 0.75rem;
+}

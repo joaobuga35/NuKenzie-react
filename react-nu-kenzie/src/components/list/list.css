@@ -1,10 +1,64 @@
+.section-cards {
+  margin-top: 0.75rem;
+}
+
+.div-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .list {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 6.25rem;
+}
+
+.title {
+  font-size: 1rem;
 }
 
 .div-btn-list {
   display: flex;
   gap: 1rem;
+}
+
+.btn-summary {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--gray-2);
+  color: var(--gray-4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray-2);
+  cursor: pointer;
+}
+
+.all {
+  height: 2.5rem;
+  width: 4.313rem;
+}
+
+.enter {
+  height: 2.5rem;
+  width: 4.5rem;
+}
+
+.exit {
+  height: 2.5rem;
+  width: 4.5rem;
+}
+
+.btn-checked {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+
+.list-values {
+  list-style: none;
+  width: 100%;
 }

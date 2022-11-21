@@ -1,17 +1,17 @@
+import { Card } from "../Card";
 import "./list.css";
 export const List = ({ card }) => {
   return (
-    <section>
+    <section className="section-cards">
       <div className="list">
-        <h2>Resumo financeiro</h2>
+        <h2 className="title">Resumo financeiro</h2>
         <div className="div-btn-list">
-          <button>Todos</button>
-          <button>Entrada</button>
-          <button>Saída</button>
+          <button className="btn-summary all">Todos</button>
+          <button className="btn-summary enter">Entrada</button>
+          <button className="btn-summary exit">Despesas</button>
         </div>
       </div>
-
-      <ul></ul>
+      <ul className="list-values">{card}</ul>
     </section>
   );
 };

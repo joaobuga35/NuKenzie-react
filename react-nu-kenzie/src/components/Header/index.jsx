@@ -2,6 +2,7 @@ import "./header.css";
 import logoblack from "../../assets/logoblack.png";
 import { Form } from "../Form";
 import { List } from "../list";
+import { Card } from "../Card";
 export const Header = ({ logout }) => {
   return (
     <div className="principal-content">
@@ -15,7 +16,7 @@ export const Header = ({ logout }) => {
       </header>
       <section className="section-principal">
         <Form></Form>
-        <List></List>
+        <List card={Card()}></List>
       </section>
     </div>
   );
