@@ -1,9 +1,14 @@
 import "./header.css";
 import logoblack from "../../assets/logoblack.png";
 import { Form } from "../Form";
-import { List } from "../list";
-import { Card } from "../Card";
-export const Header = ({ logout }) => {
+import { RenderList } from "../list";
+export const Header = ({
+  logout,
+  listTransaction,
+  setListTransaction,
+  filterList,
+  setFilterList,
+}) => {
   return (
     <div className="principal-content">
       <header className="head">
@@ -15,8 +20,18 @@ export const Header = ({ logout }) => {
         </div>
       </header>
       <section className="section-principal">
-        <Form></Form>
-        <List card={Card()}></List>
+        <Form
+          listTransaction={listTransaction}
+          setListTransaction={setListTransaction}
+          filterList={filterList}
+          setFilterList={setFilterList}
+        ></Form>
+        <RenderList
+          listTransaction={listTransaction}
+          setListTransaction={setListTransaction}
+          filterList={filterList}
+          setFilterList={setFilterList}
+        ></RenderList>
       </section>
     </div>
   );

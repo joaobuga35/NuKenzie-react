@@ -1,10 +1,40 @@
 import "./form.css";
-import { Button } from "../Buttons";
 import { TotalMoney } from "../TotalMoney";
-export const Form = () => {
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+export const Form = ({
+  listTransaction,
+  setListTransaction,
+  filterList,
+  setFilterList,
+}) => {
+  const [description, setDescription] = useState("");
+  const [type, setType] = useState("Entrada");
+  const [value, setValue] = useState("");
+
+  const object = (description, type, value) => {
+    const newObject = {
+      uuid: uuidv4(),
+      description: description,
+      type: type,
+      value: value,
+    };
+    setListTransaction([...listTransaction, newObject]);
+    setFilterList([...filterList, newObject]);
+    setDescription("");
+    setValue("");
+    console.log(newObject);
+  };
+
   return (
     <section>
-      <form className="form-numbers">
+      <form
+        className="form-numbers"
+        onSubmit={(event) => {
+          event.preventDefault();
+          object(description, type, value);
+        }}
+      >
         <label className="label-description" htmlFor="descricao">
           Descrição
         </label>
@@ -13,7 +43,9 @@ export const Form = () => {
           type="text"
           name="descricao"
           id="description"
+          value={description}
           placeholder="Digite aqui sua descrição"
+          onChange={(event) => setDescription(event.target.value)}
         />
         <span className="span-example">Ex: Compra de roupas</span>
 
@@ -28,6 +60,8 @@ export const Form = () => {
               name="value"
               id="value-user"
               placeholder="1"
+              value={value}
+              onChange={(event) => setValue(event.target.value)}
             />
             <span className="span-position">R$</span>
           </div>
@@ -40,19 +74,20 @@ export const Form = () => {
               className="input-select"
               name="entrada-saida"
               id="enter-exit"
+              onChange={(event) => setType(event.target.value)}
             >
-              <option value="entrada">Entrada</option>
-              <option value="saida">Saída</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Saida">Saída</option>
             </select>
           </div>
         </div>
         <div className="div-btn">
-          <Button className={"buttons-primary new-button"}>
+          <button type="submit" className="buttons-primary new-button">
             Inserir valor
-          </Button>
+          </button>
         </div>
       </form>
-      <TotalMoney></TotalMoney>
+      <TotalMoney listTransaction={listTransaction}></TotalMoney>
     </section>
   );
 };

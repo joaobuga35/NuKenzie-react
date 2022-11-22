@@ -1,19 +1,28 @@
 import "./card.css";
 import { FaTrash } from "react-icons/fa";
 
-export const Card = () => {
+export const Card = ({ transaction, index, deleteFromHere }) => {
   return (
-    <li className="card-values card-green card-white">
+    <li
+      id={index}
+      key={index}
+      className={`card-values ${
+        transaction.type == "Entrada" ? "card-green" : "card-white"
+      }`}
+    >
       <div className="div-format-card">
-        <h2 className="title-card">Descrição</h2>
+        <h2 className="title-card">{transaction.description}</h2>
         <div className="div-btn-trash">
-          <span>R$ 6.660,00</span>
-          <button className="button-trash">
-            <FaTrash />
+          <span>R$ {transaction.value}</span>
+          <button
+            className="button-trash"
+            onClick={() => deleteFromHere(transaction.uuid)}
+          >
+            <FaTrash className={"button-trash-intern"} />
           </button>
         </div>
       </div>
-      <small className="last-card-item">Entrada</small>
+      <small className="last-card-item">{transaction.type}</small>
     </li>
   );
 };

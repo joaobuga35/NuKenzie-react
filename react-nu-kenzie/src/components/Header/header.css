@@ -45,3 +45,14 @@
   align-items: flex-start;
   gap: 3.625rem;
 }
+
+@media (max-width: 900px) {
+  .head {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .section-principal {
+    margin-left: 0.75rem;
+    flex-direction: column;
+  }
+}

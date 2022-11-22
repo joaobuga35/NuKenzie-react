@@ -1,4 +1,5 @@
 .section-cards {
+  width: 31.5rem;
   margin-top: 0.75rem;
 }
 
@@ -37,6 +38,10 @@
   cursor: pointer;
 }
 
+.btn-summary:hover {
+  filter: brightness(0.9);
+}
+
 .all {
   height: 2.5rem;
   width: 4.313rem;
@@ -52,7 +57,7 @@
   width: 4.5rem;
 }
 
-.btn-checked {
+.btn-summary:hover {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   color: var(--white);
@@ -61,4 +66,13 @@
 .list-values {
   list-style: none;
   width: 100%;
+}
+
+@media (max-width: 375px) {
+  .section-cards {
+    width: 200px;
+  }
+  .nocard {
+    width: 200px;
+  }
 }

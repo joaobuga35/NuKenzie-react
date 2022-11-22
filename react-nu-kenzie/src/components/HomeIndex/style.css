@@ -55,3 +55,12 @@
   margin-top: 5.875rem;
   height: 31.25rem;
 }
+
+@media (max-width: 750px) {
+  .div-information {
+    margin-top: 8.375rem;
+  }
+  .logotype {
+    display: none;
+  }
+}
