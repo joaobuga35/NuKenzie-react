@@ -39,6 +39,7 @@ export const Form = ({
           Descrição
         </label>
         <input
+          required
           className="input-text"
           type="text"
           name="descricao"
@@ -55,6 +56,7 @@ export const Form = ({
               Valor
             </label>
             <input
+              required
               className="input-number"
               type="number"
               name="value"
@@ -71,6 +73,7 @@ export const Form = ({
               Tipo de valor
             </label>
             <select
+              required
               className="input-select"
               name="entrada-saida"
               id="enter-exit"
